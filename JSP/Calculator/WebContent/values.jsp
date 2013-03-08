@@ -23,6 +23,9 @@
 
 		<form method="post" action="Calculator">
 			<input type="hidden" name="step" value="3">
+			<% if (request.getAttribute("error") == "1") { %>
+				<p class="text-error">You must enter two numbers.</p>
+			<% } %>
 			<label>Number 1:</label> 
 			<input type="text" name="val1" /> 
 			<label>Number 2:</label>
